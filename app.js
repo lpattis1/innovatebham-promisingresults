@@ -78,7 +78,8 @@ async function doMath() {
     const finalresult = (await result7) + 32;
     return finalresult;
   } catch {
-    console.log(err);
+    const err = new Error("Something went wrong");
+    return err;
   }
 }
 
