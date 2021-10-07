@@ -76,10 +76,12 @@ async function doMath() {
     console.log(`(Asyn/Await). The seventh result is: ${result7}`);
 
     const finalresult = (await result7) + 32;
-    console.log(`(Asyn/Await). The final result is: ${finalresult}`);
+    return finalresult;
   } catch {
     console.log(err);
   }
 }
 
-doMath();
+doMath().then((result) => {
+  console.log(`(Asyn/Await). The final result is: ${result}`);
+});
