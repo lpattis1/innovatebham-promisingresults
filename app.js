@@ -82,6 +82,10 @@ async function doMath() {
   }
 }
 
-doMath().then((result) => {
-  console.log(`(Asyn/Await). The final result is: ${result}`);
-});
+doMath()
+  .then((result) => {
+    console.log(`(Asyn/Await). The final result is: ${result}`);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
